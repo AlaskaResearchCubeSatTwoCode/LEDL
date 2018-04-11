@@ -1,0 +1,88 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints/>
+ <EEMRegistersWindow>
+  <EEMRegisters moduleClockControl="841d" generalClockControl="2e" />
+ </EEMRegistersWindow>
+ <EEMStateStorageWindow>
+  <EEMStateStorage control="2" />
+ </EEMStateStorageWindow>
+ <EEMTriggerSequencerWindow>
+  <EEMTriggers seqnxtstate0="0" seqnxtstate1="0" seq_ctl="0" seqaction="" />
+ </EEMTriggerSequencerWindow>
+ <EEMTriggersWindow/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="LEDL_TEST_REV2.2" addressSpace="" />
+ </Memory1>
+ <Memory2>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="LEDL_TEST_REV2.2" addressSpace="" />
+ </Memory2>
+ <Memory3>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="LEDL_TEST_REV2.2" addressSpace="" />
+ </Memory3>
+ <Memory4>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="LEDL_TEST_REV2.2" addressSpace="" />
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="LEDL_TEST_REV2.2" name="unnamed" />
+  <ProjectSessionItem path="LEDL_TEST_REV2.2;LEDL_TEST_REV2.2" name="unnamed" />
+  <ProjectSessionItem path="LEDL_TEST_REV2.2;LEDL_TEST_REV2.2;Source Files" name="unnamed" />
+ </Project>
+ <Register1>
+  <RegisterWindow openNodes="UCSI_A2_UART" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="UCSI_A2_UART/UCA2CTLW0;UCSI_A2_UART/UCA2CTL0;UCSI_A2_UART/UCA2CTL1;UCSI_A2_UART/UCA2CTLW1;UCSI_A2_UART/UCA2BRW;UCSI_A2_UART/UCA2BR0;UCSI_A2_UART/UCA2BR1;UCSI_A2_UART/UCA2MCTLW;UCSI_A2_UART/UCA2STATW;UCSI_A2_UART/UCA2RXBUF;UCSI_A2_UART/UCA2TXBUF;UCSI_A2_UART/UCA2ABCTL;UCSI_A2_UART/UCA2IRCTL;UCSI_A2_UART/UCA2IRTCTL;UCSI_A2_UART/UCA2IRRCTL;UCSI_A2_UART/UCA2IE;UCSI_A2_UART/UCA2IFG;UCSI_A2_UART/UCA2IV" name="LEDL_TEST_REV2.2" />
+ </Register1>
+ <Register2>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="CPU Registers/PC;CPU Registers/SP;CPU Registers/SR;CPU Registers/R4;CPU Registers/R5;CPU Registers/R6;CPU Registers/R7;CPU Registers/R8;CPU Registers/R9;CPU Registers/R10;CPU Registers/R11;CPU Registers/R12;CPU Registers/R13;CPU Registers/R14;CPU Registers/R15" name="LEDL_TEST_REV2.2" />
+ </Register2>
+ <Register3>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="CPU Registers/PC;CPU Registers/SP;CPU Registers/SR;CPU Registers/R4;CPU Registers/R5;CPU Registers/R6;CPU Registers/R7;CPU Registers/R8;CPU Registers/R9;CPU Registers/R10;CPU Registers/R11;CPU Registers/R12;CPU Registers/R13;CPU Registers/R14;CPU Registers/R15" name="LEDL_TEST_REV2.2" />
+ </Register3>
+ <Register4>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="CPU Registers/PC;CPU Registers/SP;CPU Registers/SR;CPU Registers/R4;CPU Registers/R5;CPU Registers/R6;CPU Registers/R7;CPU Registers/R8;CPU Registers/R9;CPU Registers/R10;CPU Registers/R11;CPU Registers/R12;CPU Registers/R13;CPU Registers/R14;CPU Registers/R15" name="LEDL_TEST_REV2.2" />
+ </Register4>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" >
+   <Watchpoint evalMode="0" linenumber="360" numelements="0" radix="-1" name="x_Acc" list="" expression="x_Acc" filename="commands.c" />
+   <Watchpoint evalMode="2" linenumber="359" numelements="1" radix="-1" name="dat" list="" expression="dat" filename="commands.c" />
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="commands.c" y="360" path="commands.c" left="0" selected="0" name="unnamed" top="347" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="LIS3DH_Accelerometer.h" y="43" path="LIS3DH_Accelerometer.h" left="0" selected="0" name="unnamed" top="6" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="L3G4200_GYRO.h" y="0" path="L3G4200_GYRO.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="main.c" y="24" path="main.c" left="0" selected="0" name="unnamed" top="3" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../../../arc2-software/libraries/i2clib/i2c.c" y="39" path="../../../arc2-software/libraries/i2clib/i2c.c" left="0" selected="0" name="unnamed" top="11" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../../../arc2-software/libraries/termlib/terminal.c" y="192" path="../../../arc2-software/libraries/termlib/terminal.c" left="0" selected="0" name="unnamed" top="174" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="controls_command.c" y="71" path="controls_command.c" left="0" selected="0" name="unnamed" top="28" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../../../arc2-software/libraries/arclib/mainLoop.c" y="852" path="../../../arc2-software/libraries/arclib/mainLoop.c" left="0" selected="0" name="unnamed" top="830" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="temp.h" y="7" path="temp.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="pins.h" y="17" path="pins.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for MSP430 3.1/include/stdio.h" y="32" path="C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for MSP430 3.1/include/stdio.h" left="0" selected="0" name="unnamed" top="3" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="ADC_setup.c" y="25" path="ADC_setup.c" left="0" selected="0" name="unnamed" top="15" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="subsystem.h" y="4" path="subsystem.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="subsystem.c" y="97" path="subsystem.c" left="0" selected="0" name="unnamed" top="66" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../../../arc2-software/include/ARCbus.h" y="188" path="../../../arc2-software/include/ARCbus.h" left="0" selected="0" name="unnamed" top="136" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="ADC_setup.h" y="0" path="ADC_setup.h" left="0" selected="1" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="C:/Users/mjohn382/AppData/Local/Rowley Associates Limited/CrossWorks for MSP430/v3/packages/include/msp430f6779a.h" y="6516" path="C:/Users/mjohn382/AppData/Local/Rowley Associates Limited/CrossWorks for MSP430/v3/packages/include/msp430f6779a.h" left="0" selected="0" name="unnamed" top="6412" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="../../../ARC2-Software/include/terminal.h" y="15" path="../../../ARC2-Software/include/terminal.h" left="0" selected="0" name="unnamed" top="0" />
+ </Files>
+ <MSP430CrossStudioWindow activeProject="LEDL_TEST_REV2.2" autoConnectTarget="MSP-FET" debugSearchFileMap="" fileDialogInitialDirectory="Z:/ARC-2/ARC2-LEDL/ARC2-LEDL-Software Design/Morgan_LEDL_Test_Board_R2.2" fileDialogDefaultFilter="*.c" autoConnectCapabilities="528255" debugSearchPath="" buildConfiguration="MSP430 Debug" />
+</session>
