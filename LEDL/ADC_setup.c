@@ -6,7 +6,7 @@
 #include "subsystem.h"
 
 int adctemp;
-int adctemparray1[3];
+int adctemparray1[6];
 int readvalue;
 extern int adctemp;
 //CTL_EVENT_SET_t handle_adc;
@@ -18,8 +18,8 @@ int check_adc_read;
 void adcsetup(void) {
 //setting up A0-A5 for ADC
   //ctl_events_init(&handle_adc, 0);
-  P1SEL0 = 0X08; // DISABLES THE DITIGAL FUNCTION OF PORT 0. MAKES THEM ALL ANALOG CAPABLE
-  P1SEL1 = 0X08; // DISABLES THE DITIGAL FUNCTION OF PORT 1. sets up for ADC10_A function
+  P1SEL0 = 0X3F; // DISABLES THE DITIGAL FUNCTION OF PORT 0. MAKES THEM ALL ANALOG CAPABLE
+  P1SEL1 = 0X3F; // DISABLES THE DITIGAL FUNCTION OF PORT 1. sets up for ADC10_A function
   //BITS SET TO DEFINE ADC12 FOR SINGLE CHANNEL MODE
   ADC10CTL0 |= ADC10SHT_3 | ADC10ON  | ADC10MSC; // SAMPELING FOR 32 CLOCK CYCLES | ADC12 IS ON | CONVERT AUTOMATICALLY MULTISAMPMODE
 // ADC10CTL1 |= ADC10SHS_0 | ADC10SHP | ADC10DIV_0 | ADC10SSEL_0 | ADC10CONSEQ_1; // triggers off of SHS | SAMPCON signal is sorced from the sampeling timer
@@ -30,7 +30,7 @@ void adcsetup(void) {
   //enable interrupt OF DATA READY
   ADC10IE |= ADC10IE0;
   // SET ALL THE CORESPONDING MEMEORY REGISTERS WITH CORESPONDING INPUT CHANNEL
-  ADC10MCTL0 = ADC10SREF_0 | ADC10INCH_2; //USED SOURCE VOLTAGE TO COMPARE RAILS | INPUT CHANNEL start IS A5
+  ADC10MCTL0 = ADC10SREF_0 | ADC10INCH_5; //USED SOURCE VOLTAGE TO COMPARE RAILS | INPUT CHANNEL start IS A5
 
   ADC10IFG = 0; // SET ALL FLAGS TO 0
 
@@ -47,10 +47,11 @@ void adc_int(void) __interrupt[ADC10_VECTOR] { //this is an interrupt function t
     check_adc_read = ADC10MCTL0;
     adctemparray1[adccount] = ADC10MEM0 | (check_adc_read << 13);
     adccount++;
-    if (adccount == 2) {
-       ctl_events_set_clear(&SYS_evt,SYS_EV_1,0);
+    if (adccount == 5) {
+       //ctl_events_set_clear(&SYS_evt,SYS_EV_1,0);
       //ctl_events_set_clear(&handle_adc, 1 << 0, 0);
       adccount = 0;
+      P7OUT ^= BIT6;
     }
     break ;
 
@@ -86,12 +87,12 @@ void stop_ADC_sampeling(void) {
 
 void init_timerA3(void) {
   //setup timer A
-  TA3CTL |= TASSEL_1 | ID_0 | TACLR; //TASSEL_2 SMClK TASSEL_1 ACLK
+  TA3CTL = TASSEL_1 | ID_0 | TACLR; //TASSEL_2 SMClK TASSEL_1 ACLK
   //init CCR0 for tick interrupt
   //TACCR0=32;
 // TACCTL0=CCIE;
   TA3CCR0 = 8;
-  TA3CCTL0 |= OUTMOD_4 | CCIE;
+  TA3CCTL0 = OUTMOD_4 | CCIE;
 }
 
 //start timer A in continuous mode

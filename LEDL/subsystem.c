@@ -6,11 +6,8 @@
 #include <SDlib.h>
 #include "subsystem.h"
 
-extern int get_Acceleration(char **argv,unsigned short argc);
-extern unsigned char acc[4];
-
 CTL_EVENT_SET_t SYS_evt; // This creates the event struct,change SYS to actual subsystem
-//int temp_array[256];
+int temp_array[256];
 
 int LEDL_parseCmd(unsigned char src,unsigned char cmd,unsigned char *dat,unsigned short len,unsigned char flags);
 CMD_PARSE_DAT LEDL_parse={LEDL_parseCmd,CMD_PARSE_ADDR0|CMD_PARSE_GC_ADDR,BUS_PRI_NORMAL,NULL};
@@ -89,7 +86,7 @@ void sub_events(void *p) __toplevel{
 }
 
 void sys_events(void *p) __toplevel{
-  unsigned int e, ret; 
+  unsigned int e;
   unsigned char i; 
   ctl_events_init(&SYS_evt,0); //Initialize Event
  
@@ -98,12 +95,11 @@ void sys_events(void *p) __toplevel{
     e=ctl_events_wait(CTL_EVENT_WAIT_ANY_EVENTS_WITH_AUTO_CLEAR,&SYS_evt,SYS_EVT_ALL,CTL_TIMEOUT_NONE,0);
 //*************************************************** Events to be processed for system ****************************************************************
     if(e&SYS_EV_1){
-    ret=get_Acceleration(0,0); 
-    printf("acceleration is status=%i, x=%i, y=%i, z=%i", acc[0],acc[1],acc[2],acc[3]); 
+//    temp_array[i]=getX_Acceleration(); 
     i++; 
-    if (i==10){
+    if (i==255){
     //print(
-    i=0;
+
     }
     }
     if(e&SYS_EV_2){

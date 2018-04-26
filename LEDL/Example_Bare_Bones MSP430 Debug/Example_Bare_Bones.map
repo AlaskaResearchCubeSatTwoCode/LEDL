@@ -4,92 +4,92 @@ SYMBOLS BY NAME
       80            CTL_IRQ_STACK_SIZE  
     3e70 UDATA0     _ARC_bus_helper_task
     4090 UDATA0     _ARC_bus_task       
-   1265e CODE       _ARC_setup          
+   125a0 CODE       _ARC_setup          
     d14f CONST      _ARClib_version     
-   15432 CODE       _ARClib_version_Cmd 
+   15374 CODE       _ARClib_version_Cmd 
     d162 CONST      _ARClib_vstruct     
-   1537c CODE       _ARCsearch_Cmd      
-   11f12 CODE       _BUS_I2C_release    
+   152be CODE       _ARCsearch_Cmd      
+   11e54 CODE       _BUS_I2C_release    
     3e8c UDATA0     _BUS_INT_events     
-   11eb0 CODE       _BUS_OA_check       
-   12246 CODE       _BUS_SPI_txrx       
-   11e40 CODE       _BUS_addr_to_flags  
-   134fe CODE       _BUS_alarm_ticker_update
-   11e96 CODE       _BUS_cmd_init       
-   14170 CODE       _BUS_cmd_resptostr  
-   11fae CODE       _BUS_cmd_tx         
-   13fc4 CODE       _BUS_cmdtostr       
-   13ef4 CODE       _BUS_error_str      
-   11dca CODE       _BUS_flags_to_addr  
-   13492 CODE       _BUS_free_alarm     
-   1335c CODE       _BUS_free_buffer    
-   11d4e CODE       _BUS_get_OA         
-   13334 CODE       _BUS_get_buffer     
-   1332e CODE       _BUS_get_buffer_size
+   11df2 CODE       _BUS_OA_check       
+   12188 CODE       _BUS_SPI_txrx       
+   11d82 CODE       _BUS_addr_to_flags  
+   13440 CODE       _BUS_alarm_ticker_update
+   11dd8 CODE       _BUS_cmd_init       
+   140b2 CODE       _BUS_cmd_resptostr  
+   11ef0 CODE       _BUS_cmd_tx         
+   13f06 CODE       _BUS_cmdtostr       
+   13e36 CODE       _BUS_error_str      
+   11d0c CODE       _BUS_flags_to_addr  
+   133d4 CODE       _BUS_free_alarm     
+   1329e CODE       _BUS_free_buffer    
+   11c90 CODE       _BUS_get_OA         
+   13276 CODE       _BUS_get_buffer     
+   13270 CODE       _BUS_get_buffer_size
     3e8e UDATA0     _BUS_helper_events  
-   13324 CODE       _BUS_init_buffer    
+   13266 CODE       _BUS_init_buffer    
     3e90 UDATA0     _BUS_stack          
     509c THREAD     _BUS_thread_addr_flags
-   134aa CODE       _BUS_timer_timeout_check
+   133ec CODE       _BUS_timer_timeout_check
     4330 UDATA0     _DMA_events         
     c532 ISR        _DMA_int            
-   1479c CODE       _ERR_lev_str        
-   14ed6 CODE       _I2C_addr_lookup    
-   14f1e CODE       _I2C_addr_revlookup 
+   146de CODE       _ERR_lev_str        
+   14e18 CODE       _I2C_addr_lookup    
+   14e60 CODE       _I2C_addr_revlookup 
     c7a8 ISR        _I2C_dat            
     40f0 UDATA0     _I2C_rx_buf         
     40ee UDATA0     _I2C_rx_in          
     40ec UDATA0     _I2C_rx_out         
     508a UDATA0     _I2C_stat           
-   137ba CODE       _PMM_setVCore       
-   13700 CODE       _PMM_setVCoreDown   
-   13606 CODE       _PMM_setVCoreUp     
-   15a5e CODE       _SD_error_str       
-    f75a CODE       _SD_read            
-    f6d4 CODE       _SD_write           
-   15da0 CODE       _SPISetup           
-   12592 CODE       _SPI_deactivate     
-   15db6 CODE       _SPI_fast           
-   1255e CODE       _SPI_master_setup   
-   12578 CODE       _SPI_slave_setup    
-   15dc8 CODE       _SPI_slow           
+   136fc CODE       _PMM_setVCore       
+   13642 CODE       _PMM_setVCoreDown   
+   13548 CODE       _PMM_setVCoreUp     
+   159a0 CODE       _SD_error_str       
+    f6f6 CODE       _SD_read            
+    f670 CODE       _SD_write           
+   15ce2 CODE       _SPISetup           
+   124d4 CODE       _SPI_deactivate     
+   15cf8 CODE       _SPI_fast           
+   124a0 CODE       _SPI_master_setup   
+   124ba CODE       _SPI_slave_setup    
+   15d0a CODE       _SPI_slow           
     40c8 UDATA0     _SUB_events         
     c5f8 ISR        _SYS_NMI            
     3bca UDATA0     _SYS_evt            
     c00c ISR        _Timer_A2_A0        
     c012 ISR        _Timer_A2_A1        
-   15d84 CODE       _UCA2_Getc          
+   15cc6 CODE       _UCA2_Getc          
     c746 ISR        _UCA2_ISR           
     4f40 UDATA0     _UCA2_RxBuf         
     4fe4 UDATA0     _UCA2_TxBuf         
-   15d48 CODE       _UCA2_TxChar        
-   15c6c CODE       _UCA2_init_UART     
-    f2fe CONST      ___RAL_ascii_ctype_map
-   17088 CODE       ___RAL_ascii_mbtowc 
-   170ce CODE       ___RAL_ascii_wctomb 
-    f4d8 CONST      ___RAL_c_locale     
-    f3d6 CONST      ___RAL_c_locale_abbrev_day_names
-    f44a CONST      ___RAL_c_locale_abbrev_month_names
-    f47b CONST      ___RAL_c_locale_am_pm_indicator
-    f4a6 CONST      ___RAL_c_locale_data
-    f482 CONST      ___RAL_c_locale_date_format
-    f494 CONST      ___RAL_c_locale_date_time_format
-    f39c CONST      ___RAL_c_locale_day_names
-    f3f3 CONST      ___RAL_c_locale_month_names
-    f48b CONST      ___RAL_c_locale_time_format
-    f38c CONST      ___RAL_codeset_ascii
-    f4a5 CONST      ___RAL_data_empty_string
-    f4a3 CONST      ___RAL_data_utf8_period
+   15c8a CODE       _UCA2_TxChar        
+   15bae CODE       _UCA2_init_UART     
+    f29a CONST      ___RAL_ascii_ctype_map
+   16f96 CODE       ___RAL_ascii_mbtowc 
+   16fdc CODE       ___RAL_ascii_wctomb 
+    f474 CONST      ___RAL_c_locale     
+    f372 CONST      ___RAL_c_locale_abbrev_day_names
+    f3e6 CONST      ___RAL_c_locale_abbrev_month_names
+    f417 CONST      ___RAL_c_locale_am_pm_indicator
+    f442 CONST      ___RAL_c_locale_data
+    f41e CONST      ___RAL_c_locale_date_format
+    f430 CONST      ___RAL_c_locale_date_time_format
+    f338 CONST      ___RAL_c_locale_day_names
+    f38f CONST      ___RAL_c_locale_month_names
+    f427 CONST      ___RAL_c_locale_time_format
+    f328 CONST      ___RAL_codeset_ascii
+    f441 CONST      ___RAL_data_empty_string
+    f43f CONST      ___RAL_data_utf8_period
     1c2c IDATA0     ___RAL_global_locale
-   16cc2 CODE       ___RAL_global_locale_category
-    f2d6 CONST      ___RAL_hex_lc       
-    f2c6 CONST      ___RAL_hex_uc       
-   1707a CODE       ___RAL_init_mbstate 
-   16c26 CODE       ___RAL_isctype      
-   169c0 CODE       ___RAL_pow10        
-   16b9c CODE       ___RAL_pre_padding  
-   16b7e CODE       ___RAL_print_padding
-   11ca0 CODE       ___RAL_read_tp      
+   16bd0 CODE       ___RAL_global_locale_category
+    f272 CONST      ___RAL_hex_lc       
+    f262 CONST      ___RAL_hex_uc       
+   16f88 CODE       ___RAL_init_mbstate 
+   16b34 CODE       ___RAL_isctype      
+   168ce CODE       ___RAL_pow10        
+   16aaa CODE       ___RAL_pre_padding  
+   16a8c CODE       ___RAL_print_padding
+   11be2 CODE       ___RAL_read_tp      
     1c00            ___RAM_Address      
     8000            ___RAM_Size         
     1c00            ___begin_IDATA0     
@@ -106,34 +106,34 @@ SYMBOLS BY NAME
      4e8            ___crt_res2         
      4ea            ___crt_res3         
      4ca            ___crt_reslo        
-   1697a CODE       ___digit            
+   16888 CODE       ___digit            
     1c36            ___end_IDATA0       
     50a0            ___end_THREAD       
     509c            ___end_UDATA0       
-   16c9a CODE       ___errno            
-   1733e CODE       ___float32_add      
-   17514 CODE       ___float32_div      
-   175ee CODE       ___float32_eq       
-   17126 CODE       ___float32_isinf    
-   17140 CODE       ___float32_isnan    
-   175d2 CODE       ___float32_lt       
-   1743c CODE       ___float32_mul      
-    f4e0 CONST      ___float32_nan      
-   17158 CODE       ___float32_signbit  
-   17430 CODE       ___float32_sub      
-   1728c CODE       ___float32_to_int64 
-    f4f4 CODE       ___getchar          
-   16802 CODE       ___int16_div        
-   16828 CODE       ___int16_mod        
-   1684e CODE       ___int16_mul        
-   167e0 CODE       ___int32_mul        
-   16864 CODE       ___int64_lsl        
-   16876 CODE       ___int64_lsr        
-   113b2 CODE       ___printf_lock      
-   113ce CODE       ___printf_unlock    
-   16b34 CODE       ___putc             
-    f4e4 CODE       ___putchar          
-   16a16 CODE       ___strtoul          
+   16ba8 CODE       ___errno            
+   1724c CODE       ___float32_add      
+   17422 CODE       ___float32_div      
+   174fc CODE       ___float32_eq       
+   17034 CODE       ___float32_isinf    
+   1704e CODE       ___float32_isnan    
+   174e0 CODE       ___float32_lt       
+   1734a CODE       ___float32_mul      
+    f47c CONST      ___float32_nan      
+   17066 CODE       ___float32_signbit  
+   1733e CODE       ___float32_sub      
+   1719a CODE       ___float32_to_int64 
+    f490 CODE       ___getchar          
+   16710 CODE       ___int16_div        
+   16736 CODE       ___int16_mod        
+   1675c CODE       ___int16_mul        
+   166ee CODE       ___int32_mul        
+   16772 CODE       ___int64_lsl        
+   16784 CODE       ___int64_lsr        
+   112f4 CODE       ___printf_lock      
+   11310 CODE       ___printf_unlock    
+   16a42 CODE       ___putc             
+    f480 CODE       ___putchar          
+   16924 CODE       ___strtoul          
     c722 ISR        ___thunk_ARClib_version_Cmd
     c71e ISR        ___thunk_ARCsearch_Cmd
     c01c ISR        ___thunk_SD_read    
@@ -161,96 +161,95 @@ SYMBOLS BY NAME
     c712 ISR        ___thunk_timeCmd    
     c72e ISR        ___thunk_timesliceCmd
     c716 ISR        ___thunk_txCmd      
-   168f6 CODE       ___uint16_div       
-   1690e CODE       ___uint16_mod       
-   16916 CODE       ___uint64_div       
-   1693e CODE       ___uint64_divmod    
-   168d6 CODE       ___uint64_mod       
-   17168 CODE       ___uint64_to_float32
+   16804 CODE       ___uint16_div       
+   1681c CODE       ___uint16_mod       
+   16824 CODE       ___uint64_div       
+   1684c CODE       ___uint64_divmod    
+   167e4 CODE       ___uint64_mod       
+   17076 CODE       ___uint64_to_float32
     1c2a IDATA0     ___ungot            
     509a UDATA0     ___user_format_extender
-    fd76 CODE       ___vfprintf         
-    fd76 CODE       ___vfprintf_float_long_long
-   1605c CODE       __mmc_pins_map      
-   146ae CODE       __record_error      
-   16bc6 CODE       _abs                
-   11ee6 CODE       _addr_chk           
+    fcca CODE       ___vfprintf         
+    fcca CODE       ___vfprintf_float_long_long
+   15f6a CODE       __mmc_pins_map      
+   145f0 CODE       __record_error      
+   16ad4 CODE       _abs                
+   11e28 CODE       _addr_chk           
     4984 UDATA0     _alarms             
     40ca UDATA0     _arcBus_stat        
     1c16 IDATA0     _async_addr         
-   133fe CODE       _async_close_remote 
-   13366 CODE       _async_isOpen       
-   1336c CODE       _async_open_remote  
+   13340 CODE       _async_close_remote 
+   132a8 CODE       _async_isOpen       
+   132ae CODE       _async_open_remote  
     4968 UDATA0     _async_rxQ          
-   1342c CODE       _async_send_data    
+   1336e CODE       _async_send_data    
     1c18 IDATA0     _async_timer        
     4976 UDATA0     _async_txQ          
-   16bd6 CODE       _atoi               
-   16bfc CODE       _atol               
+   16ae4 CODE       _atoi               
+   16b0a CODE       _atol               
     4736 UDATA0     _buffer_mutex       
     e558 CONST      _busAddrSym         
     c034 ISR        _bus_I2C_isr        
     c470 ISR        _bus_SPI_isr        
-   141f6 CODE       _bus_flags_tostr    
+   14138 CODE       _bus_flags_tostr    
     c47c ISR        _bus_int            
     c5b2 ISR        _bus_resend         
-   14216 CODE       _bus_version_err_tostr
-   159b4 CODE       _clearErrCmd        
-   148f0 CODE       _clear_saved_errors 
+   14158 CODE       _bus_version_err_tostr
+   158f6 CODE       _clearErrCmd        
+   14832 CODE       _clear_saved_errors 
     1c1a IDATA0     _closed_event       
     1c1c IDATA0     _closed_flag        
     1c12 IDATA0     _cmd_parse_list     
     c8e2 CONST      _cmd_tbl            
-   124ea CODE       _crc16              
-   124b8 CODE       _crc7               
+   1242c CODE       _crc16              
+   123fa CODE       _crc7               
     3c5e UDATA0     _crc_mutex          
-   117cc CODE       _ctl_byte_queue_init
-   11b9a CODE       _ctl_byte_queue_post
-   11914 CODE       _ctl_byte_queue_post_multi
-   11aba CODE       _ctl_byte_queue_post_multi_nb
-   11bee CODE       _ctl_byte_queue_post_nb
-   11bc8 CODE       _ctl_byte_queue_receive
-   119ec CODE       _ctl_byte_queue_receive_multi
-   11b2a CODE       _ctl_byte_queue_receive_multi_nb
-   11c08 CODE       _ctl_byte_queue_receive_nb
+   1170e CODE       _ctl_byte_queue_init
+   11adc CODE       _ctl_byte_queue_post
+   11856 CODE       _ctl_byte_queue_post_multi
+   119fc CODE       _ctl_byte_queue_post_multi_nb
+   11b30 CODE       _ctl_byte_queue_post_nb
+   11b0a CODE       _ctl_byte_queue_receive
+   1192e CODE       _ctl_byte_queue_receive_multi
+   11a6c CODE       _ctl_byte_queue_receive_multi_nb
+   11b4a CODE       _ctl_byte_queue_receive_nb
     3bd2 UDATA0     _ctl_current_time   
-   11cca CODE       _ctl_enter_isr      
-   113e2 CODE       _ctl_events_init    
-   11576 CODE       _ctl_events_set_clear
-   113f6 CODE       _ctl_events_wait    
-   11cfe CODE       _ctl_exit_isr       
-   1139a CODE       _ctl_get_current_time
-   11d36 CODE       _ctl_global_interrupts_set
-   137fa CODE       _ctl_handle_error   
-   11320 CODE       _ctl_increment_tick_from_isr
+   11c0c CODE       _ctl_enter_isr      
+   11324 CODE       _ctl_events_init    
+   114b8 CODE       _ctl_events_set_clear
+   11338 CODE       _ctl_events_wait    
+   11c40 CODE       _ctl_exit_isr       
+   112dc CODE       _ctl_get_current_time
+   11c78 CODE       _ctl_global_interrupts_set
+   1373c CODE       _ctl_handle_error   
+   11262 CODE       _ctl_increment_tick_from_isr
     3bd7 UDATA0     _ctl_interrupt_count
     3bce UDATA0     _ctl_last_schedule_time
     1c06 IDATA0     _ctl_libc_mutex     
-   115d6 CODE       _ctl_mutex_init     
-   11602 CODE       _ctl_mutex_lock     
-   115ee CODE       _ctl_mutex_lock_uc  
-   11706 CODE       _ctl_mutex_unlock   
-   11050 CODE       _ctl_private_add_to_task_list
-   114f2 CODE       _ctl_private_events_schedule
-   11c1c CODE       _ctl_private_get_stack_start
-   11c22 CODE       _ctl_private_get_thread_local_storage
-   11c28 CODE       _ctl_private_init_registers
-   11c8a CODE       _ctl_private_init_thread_local_storage
-   1109e CODE       _ctl_private_remove_from_task_list
-   110d8 CODE       _ctl_private_reschedule
-   11cae CODE       _ctl_private_reschedule_from_api_call
+   11518 CODE       _ctl_mutex_init     
+   11544 CODE       _ctl_mutex_lock     
+   11530 CODE       _ctl_mutex_lock_uc  
+   11648 CODE       _ctl_mutex_unlock   
+   10f92 CODE       _ctl_private_add_to_task_list
+   11434 CODE       _ctl_private_events_schedule
+   11b5e CODE       _ctl_private_get_stack_start
+   11b64 CODE       _ctl_private_get_thread_local_storage
+   11b6a CODE       _ctl_private_init_registers
+   11bcc CODE       _ctl_private_init_thread_local_storage
+   10fe0 CODE       _ctl_private_remove_from_task_list
+   1101a CODE       _ctl_private_reschedule
+   11bf0 CODE       _ctl_private_reschedule_from_api_call
     3bd6 UDATA0     _ctl_reschedule_on_last_isr_exit
-   11278 CODE       _ctl_task_die       
+   111ba CODE       _ctl_task_die       
     3bd8 UDATA0     _ctl_task_executing 
-   111b0 CODE       _ctl_task_init      
+   110f2 CODE       _ctl_task_init      
     3bda UDATA0     _ctl_task_list      
-   111ec CODE       _ctl_task_run       
-   112a0 CODE       _ctl_task_set_priority
+   1112e CODE       _ctl_task_run       
+   111e2 CODE       _ctl_task_set_priority
     3bcc UDATA0     _ctl_task_switch_callout
     1c04 IDATA0     _ctl_time_increment 
-   112de CODE       _ctl_timeout_wait   
+   11220 CODE       _ctl_timeout_wait   
     1c00 IDATA0     _ctl_timeslice_period
-<<<<<<< HEAD
    14ac4 CODE       _doCmd              
    15386 CODE       _errReq_Cmd         
    1374e CODE       _err_decode_arcbus  
@@ -273,35 +272,10 @@ SYMBOLS BY NAME
    12460 CODE       _get_ticker_time    
    16bb2 CODE       _getchar            
    14a12 CODE       _helpCmd            
-=======
-   14b82 CODE       _doCmd              
-   15444 CODE       _errReq_Cmd         
-   1380c CODE       _err_decode_arcbus  
-   147da CODE       _err_do_decode      
-   14526 CODE       _err_register_handler
-   145de CODE       _error_init         
-   14922 CODE       _error_log_mem_replay
-   149a4 CODE       _error_log_replay   
-   14600 CODE       _error_recording_start
-    f5e6 CODE       _example_command    
-    f66a CODE       _example_timer_IR   
-   178d6 CODE       _fabsf              
-   17694 CODE       _floor              
-   17694 CODE       _floorf             
-   17764 CODE       _fmod               
-   17764 CODE       _fmodf              
-   17918 CODE       _frexp              
-   14f56 CODE       _getI2C_addr        
-   146a8 CODE       _get_error_level    
-   1251e CODE       _get_ticker_time    
-   16ca4 CODE       _getchar            
-   14ad0 CODE       _helpCmd            
->>>>>>> f860ec491e5995ef4271f0f06d50ade527128f8b
     3c7c UDATA0     _helper_stack       
-   14c12 CODE       _hist_decr          
-   14c06 CODE       _hist_incr          
+   14b54 CODE       _hist_decr          
+   14b48 CODE       _hist_incr          
     40ac UDATA0     _idle_task          
-<<<<<<< HEAD
    12634 CODE       _initARCbus         
    124e4 CODE       _initCLK            
    1254a CODE       _initSVS            
@@ -326,95 +300,69 @@ SYMBOLS BY NAME
    15f9e CODE       _mmcReInit_card     
    1649a CODE       _mmcReadBlock       
    1667c CODE       _mmcSendCmd         
-=======
-   126f2 CODE       _initARCbus         
-   125a2 CODE       _initCLK            
-   12608 CODE       _initSVS            
-   125ec CODE       _init_timerA        
-   16c88 CODE       _iscntrl            
-   16c68 CODE       _isdigit            
-   16c56 CODE       _islower            
-   16c78 CODE       _isspace            
-   16c44 CODE       _isupper            
-   178dc CODE       _ldexp              
-   159d8 CODE       _logCmd             
-    f4fa CODE       _main               
-   132da CODE       _mainLoop           
-   142ca CODE       _main_return        
-   14a66 CODE       _make_args          
-   170f6 CODE       _memcpy             
-   17106 CODE       _memset             
-   160f4 CODE       _mmcGoIdle          
-   160e0 CODE       _mmcInit_card       
-   1607e CODE       _mmcInit_msp        
-   16000 CODE       _mmcLock            
-   16090 CODE       _mmcReInit_card     
-   1658c CODE       _mmcReadBlock       
-   1676e CODE       _mmcSendCmd         
->>>>>>> f860ec491e5995ef4271f0f06d50ade527128f8b
     1c22 IDATA0     _mmcStat            
-   15fc4 CODE       _mmcUnlock          
-   16674 CODE       _mmcWriteBlock      
+   15ed2 CODE       _mmcUnlock          
+   16582 CODE       _mmcWriteBlock      
     c79c ISR        _mmc_ISR            
-   1644c CODE       _mmc_R1             
-   16488 CODE       _mmc_R2             
-   164c4 CODE       _mmc_dat_resp       
-   15fa8 CODE       _mmc_is_init        
-   16038 CODE       _mmc_pins_on        
-   16556 CODE       _mmc_token          
-   175fe CODE       _modff              
+   1635a CODE       _mmc_R1             
+   16396 CODE       _mmc_R2             
+   163d2 CODE       _mmc_dat_resp       
+   15eb6 CODE       _mmc_is_init        
+   15f46 CODE       _mmc_pins_on        
+   16464 CODE       _mmc_token          
+   1750c CODE       _modff              
     49a4 UDATA0     _next_idx           
-   1584e CODE       _parse_log_level    
+   15790 CODE       _parse_log_level    
     1c10 IDATA0     _powerState         
-   14862 CODE       _print_error        
-   16d92 CODE       _printf             
-   15604 CODE       _priorityCmd        
-   16dce CODE       _puts               
-   127f0 CODE       _readTA1            
-   14758 CODE       _record_error       
-   15928 CODE       _replayCmd          
-   148b0 CODE       _report_error       
-   14298 CODE       _reset_bor          
-   15020 CODE       _restCmd            
+   147a4 CODE       _print_error        
+   16ca0 CODE       _printf             
+   15546 CODE       _priorityCmd        
+   16cdc CODE       _puts               
+   12732 CODE       _readTA1            
+   1469a CODE       _record_error       
+   1586a CODE       _replayCmd          
+   147f2 CODE       _report_error       
+   141da CODE       _reset_bor          
+   14f62 CODE       _restCmd            
     473c UDATA0     _rxbuf              
     4994 UDATA0     _saved_error        
-    fbee CODE       _send_I2C           
-   1469c CODE       _set_error_level    
-   12536 CODE       _setget_ticker_time 
-   1526a CODE       _spiCmd             
-   15e10 CODE       _spiDummyClk        
-   15e46 CODE       _spiReadFrame       
-   15dd8 CODE       _spiSendByte        
-   15efe CODE       _spiSendFrame       
-   16e08 CODE       _sprintf            
-   15804 CODE       _stackCmd           
-   12600 CODE       _start_timerA       
-   142de CODE       _startup_error_check
-   15720 CODE       _stateName          
-   157a2 CODE       _statsCmd           
-   16e38 CODE       _strcat             
-   16e58 CODE       _strcmp             
-   16e78 CODE       _strcpy             
-   16ebc CODE       _strlcpy            
-   17116 CODE       _strlen             
-   16e8e CODE       _strncmp            
-   16f00 CODE       _strnlen            
-   16f1a CODE       _strtol             
-   16fc6 CODE       _strtoul            
-    fc8e CODE       _sub_events         
+    fb42 CODE       _send_I2C           
+   145de CODE       _set_error_level    
+   12478 CODE       _setget_ticker_time 
+   151ac CODE       _spiCmd             
+   15d38 CODE       _spiDummyClk        
+   15d54 CODE       _spiReadFrame       
+   15d1a CODE       _spiSendByte        
+   15e0c CODE       _spiSendFrame       
+   16d16 CODE       _sprintf            
+   15746 CODE       _stackCmd           
+   12542 CODE       _start_timerA       
+   14220 CODE       _startup_error_check
+   15662 CODE       _stateName          
+   156e4 CODE       _statsCmd           
+   16d46 CODE       _strcat             
+   16d66 CODE       _strcmp             
+   16d86 CODE       _strcpy             
+   16dca CODE       _strlcpy            
+   17024 CODE       _strlen             
+   16d9c CODE       _strncmp            
+   16e0e CODE       _strnlen            
+   16e28 CODE       _strtol             
+   16ed4 CODE       _strtoul            
+    fbe2 CODE       _sub_events         
     1c36 UDATA0     _sub_stack          
     3b92 UDATA0     _sub_task           
-    fd1e CODE       _sys_events         
+    fc72 CODE       _sys_events         
     2406 UDATA0     _sys_stack          
     3b76 UDATA0     _sys_task           
     c578 ISR        _task_tick          
-   14c1e CODE       _terminal           
+   14b60 CODE       _terminal           
     2bd6 UDATA0     _terminal_stack     
     3bae UDATA0     _terminal_task      
     3c64 UDATA0     _ticker_time        
-   150d6 CODE       _timeCmd            
-   156b8 CODE       _timesliceCmd       
-   150ec CODE       _txCmd              
+   15018 CODE       _timeCmd            
+   155fa CODE       _timesliceCmd       
+   1502e CODE       _txCmd              
     4868 UDATA0     _txbuf              
     d1a8 CONST      thread_init_begin   
     d1ac CONST      thread_init_end     
@@ -541,7 +489,6 @@ SYMBOLS BY VALUE
     d1a8 CONST      thread_init_begin   
     d1ac CONST      thread_init_end     
     e558 CONST      _busAddrSym         
-<<<<<<< HEAD
     f262 CONST      ___RAL_hex_uc       
     f272 CONST      ___RAL_hex_lc       
     f29a CONST      ___RAL_ascii_ctype_map
@@ -788,251 +735,3 @@ SYMBOLS BY VALUE
    177f6 CODE       _fabsf              
    177fc CODE       _ldexp              
    17838 CODE       _frexp              
-=======
-    f2c6 CONST      ___RAL_hex_uc       
-    f2d6 CONST      ___RAL_hex_lc       
-    f2fe CONST      ___RAL_ascii_ctype_map
-    f38c CONST      ___RAL_codeset_ascii
-    f39c CONST      ___RAL_c_locale_day_names
-    f3d6 CONST      ___RAL_c_locale_abbrev_day_names
-    f3f3 CONST      ___RAL_c_locale_month_names
-    f44a CONST      ___RAL_c_locale_abbrev_month_names
-    f47b CONST      ___RAL_c_locale_am_pm_indicator
-    f482 CONST      ___RAL_c_locale_date_format
-    f48b CONST      ___RAL_c_locale_time_format
-    f494 CONST      ___RAL_c_locale_date_time_format
-    f4a3 CONST      ___RAL_data_utf8_period
-    f4a5 CONST      ___RAL_data_empty_string
-    f4a6 CONST      ___RAL_c_locale_data
-    f4d8 CONST      ___RAL_c_locale     
-    f4e0 CONST      ___float32_nan      
-    f4e4 CODE       ___putchar          
-    f4f4 CODE       ___getchar          
-    f4fa CODE       _main               
-    f5e6 CODE       _example_command    
-    f66a CODE       _example_timer_IR   
-    f6d4 CODE       _SD_write           
-    f75a CODE       _SD_read            
-    fbee CODE       _send_I2C           
-    fc8e CODE       _sub_events         
-    fd1e CODE       _sys_events         
-    fd76 CODE       ___vfprintf_float_long_long
-    fd76 CODE       ___vfprintf         
-   11050 CODE       _ctl_private_add_to_task_list
-   1109e CODE       _ctl_private_remove_from_task_list
-   110d8 CODE       _ctl_private_reschedule
-   111b0 CODE       _ctl_task_init      
-   111ec CODE       _ctl_task_run       
-   11278 CODE       _ctl_task_die       
-   112a0 CODE       _ctl_task_set_priority
-   112de CODE       _ctl_timeout_wait   
-   11320 CODE       _ctl_increment_tick_from_isr
-   1139a CODE       _ctl_get_current_time
-   113b2 CODE       ___printf_lock      
-   113ce CODE       ___printf_unlock    
-   113e2 CODE       _ctl_events_init    
-   113f6 CODE       _ctl_events_wait    
-   114f2 CODE       _ctl_private_events_schedule
-   11576 CODE       _ctl_events_set_clear
-   115d6 CODE       _ctl_mutex_init     
-   115ee CODE       _ctl_mutex_lock_uc  
-   11602 CODE       _ctl_mutex_lock     
-   11706 CODE       _ctl_mutex_unlock   
-   117cc CODE       _ctl_byte_queue_init
-   11914 CODE       _ctl_byte_queue_post_multi
-   119ec CODE       _ctl_byte_queue_receive_multi
-   11aba CODE       _ctl_byte_queue_post_multi_nb
-   11b2a CODE       _ctl_byte_queue_receive_multi_nb
-   11b9a CODE       _ctl_byte_queue_post
-   11bc8 CODE       _ctl_byte_queue_receive
-   11bee CODE       _ctl_byte_queue_post_nb
-   11c08 CODE       _ctl_byte_queue_receive_nb
-   11c1c CODE       _ctl_private_get_stack_start
-   11c22 CODE       _ctl_private_get_thread_local_storage
-   11c28 CODE       _ctl_private_init_registers
-   11c8a CODE       _ctl_private_init_thread_local_storage
-   11ca0 CODE       ___RAL_read_tp      
-   11cae CODE       _ctl_private_reschedule_from_api_call
-   11cca CODE       _ctl_enter_isr      
-   11cfe CODE       _ctl_exit_isr       
-   11d36 CODE       _ctl_global_interrupts_set
-   11d4e CODE       _BUS_get_OA         
-   11dca CODE       _BUS_flags_to_addr  
-   11e40 CODE       _BUS_addr_to_flags  
-   11e96 CODE       _BUS_cmd_init       
-   11eb0 CODE       _BUS_OA_check       
-   11ee6 CODE       _addr_chk           
-   11f12 CODE       _BUS_I2C_release    
-   11fae CODE       _BUS_cmd_tx         
-   12246 CODE       _BUS_SPI_txrx       
-   124b8 CODE       _crc7               
-   124ea CODE       _crc16              
-   1251e CODE       _get_ticker_time    
-   12536 CODE       _setget_ticker_time 
-   1255e CODE       _SPI_master_setup   
-   12578 CODE       _SPI_slave_setup    
-   12592 CODE       _SPI_deactivate     
-   125a2 CODE       _initCLK            
-   125ec CODE       _init_timerA        
-   12600 CODE       _start_timerA       
-   12608 CODE       _initSVS            
-   1265e CODE       _ARC_setup          
-   126f2 CODE       _initARCbus         
-   127f0 CODE       _readTA1            
-   132da CODE       _mainLoop           
-   13324 CODE       _BUS_init_buffer    
-   1332e CODE       _BUS_get_buffer_size
-   13334 CODE       _BUS_get_buffer     
-   1335c CODE       _BUS_free_buffer    
-   13366 CODE       _async_isOpen       
-   1336c CODE       _async_open_remote  
-   133fe CODE       _async_close_remote 
-   1342c CODE       _async_send_data    
-   13492 CODE       _BUS_free_alarm     
-   134aa CODE       _BUS_timer_timeout_check
-   134fe CODE       _BUS_alarm_ticker_update
-   13606 CODE       _PMM_setVCoreUp     
-   13700 CODE       _PMM_setVCoreDown   
-   137ba CODE       _PMM_setVCore       
-   137fa CODE       _ctl_handle_error   
-   1380c CODE       _err_decode_arcbus  
-   13ef4 CODE       _BUS_error_str      
-   13fc4 CODE       _BUS_cmdtostr       
-   14170 CODE       _BUS_cmd_resptostr  
-   141f6 CODE       _bus_flags_tostr    
-   14216 CODE       _bus_version_err_tostr
-   14298 CODE       _reset_bor          
-   142ca CODE       _main_return        
-   142de CODE       _startup_error_check
-   14526 CODE       _err_register_handler
-   145de CODE       _error_init         
-   14600 CODE       _error_recording_start
-   1469c CODE       _set_error_level    
-   146a8 CODE       _get_error_level    
-   146ae CODE       __record_error      
-   14758 CODE       _record_error       
-   1479c CODE       _ERR_lev_str        
-   147da CODE       _err_do_decode      
-   14862 CODE       _print_error        
-   148b0 CODE       _report_error       
-   148f0 CODE       _clear_saved_errors 
-   14922 CODE       _error_log_mem_replay
-   149a4 CODE       _error_log_replay   
-   14a66 CODE       _make_args          
-   14ad0 CODE       _helpCmd            
-   14b82 CODE       _doCmd              
-   14c06 CODE       _hist_incr          
-   14c12 CODE       _hist_decr          
-   14c1e CODE       _terminal           
-   14ed6 CODE       _I2C_addr_lookup    
-   14f1e CODE       _I2C_addr_revlookup 
-   14f56 CODE       _getI2C_addr        
-   15020 CODE       _restCmd            
-   150d6 CODE       _timeCmd            
-   150ec CODE       _txCmd              
-   1526a CODE       _spiCmd             
-   1537c CODE       _ARCsearch_Cmd      
-   15432 CODE       _ARClib_version_Cmd 
-   15444 CODE       _errReq_Cmd         
-   15604 CODE       _priorityCmd        
-   156b8 CODE       _timesliceCmd       
-   15720 CODE       _stateName          
-   157a2 CODE       _statsCmd           
-   15804 CODE       _stackCmd           
-   1584e CODE       _parse_log_level    
-   15928 CODE       _replayCmd          
-   159b4 CODE       _clearErrCmd        
-   159d8 CODE       _logCmd             
-   15a5e CODE       _SD_error_str       
-   15c6c CODE       _UCA2_init_UART     
-   15d48 CODE       _UCA2_TxChar        
-   15d84 CODE       _UCA2_Getc          
-   15da0 CODE       _SPISetup           
-   15db6 CODE       _SPI_fast           
-   15dc8 CODE       _SPI_slow           
-   15dd8 CODE       _spiSendByte        
-   15e10 CODE       _spiDummyClk        
-   15e46 CODE       _spiReadFrame       
-   15efe CODE       _spiSendFrame       
-   15fa8 CODE       _mmc_is_init        
-   15fc4 CODE       _mmcUnlock          
-   16000 CODE       _mmcLock            
-   16038 CODE       _mmc_pins_on        
-   1605c CODE       __mmc_pins_map      
-   1607e CODE       _mmcInit_msp        
-   16090 CODE       _mmcReInit_card     
-   160e0 CODE       _mmcInit_card       
-   160f4 CODE       _mmcGoIdle          
-   1644c CODE       _mmc_R1             
-   16488 CODE       _mmc_R2             
-   164c4 CODE       _mmc_dat_resp       
-   16556 CODE       _mmc_token          
-   1658c CODE       _mmcReadBlock       
-   16674 CODE       _mmcWriteBlock      
-   1676e CODE       _mmcSendCmd         
-   167e0 CODE       ___int32_mul        
-   16802 CODE       ___int16_div        
-   16828 CODE       ___int16_mod        
-   1684e CODE       ___int16_mul        
-   16864 CODE       ___int64_lsl        
-   16876 CODE       ___int64_lsr        
-   168d6 CODE       ___uint64_mod       
-   168f6 CODE       ___uint16_div       
-   1690e CODE       ___uint16_mod       
-   16916 CODE       ___uint64_div       
-   1693e CODE       ___uint64_divmod    
-   1697a CODE       ___digit            
-   169c0 CODE       ___RAL_pow10        
-   16a16 CODE       ___strtoul          
-   16b34 CODE       ___putc             
-   16b7e CODE       ___RAL_print_padding
-   16b9c CODE       ___RAL_pre_padding  
-   16bc6 CODE       _abs                
-   16bd6 CODE       _atoi               
-   16bfc CODE       _atol               
-   16c26 CODE       ___RAL_isctype      
-   16c44 CODE       _isupper            
-   16c56 CODE       _islower            
-   16c68 CODE       _isdigit            
-   16c78 CODE       _isspace            
-   16c88 CODE       _iscntrl            
-   16c9a CODE       ___errno            
-   16ca4 CODE       _getchar            
-   16cc2 CODE       ___RAL_global_locale_category
-   16d92 CODE       _printf             
-   16dce CODE       _puts               
-   16e08 CODE       _sprintf            
-   16e38 CODE       _strcat             
-   16e58 CODE       _strcmp             
-   16e78 CODE       _strcpy             
-   16e8e CODE       _strncmp            
-   16ebc CODE       _strlcpy            
-   16f00 CODE       _strnlen            
-   16f1a CODE       _strtol             
-   16fc6 CODE       _strtoul            
-   1707a CODE       ___RAL_init_mbstate 
-   17088 CODE       ___RAL_ascii_mbtowc 
-   170ce CODE       ___RAL_ascii_wctomb 
-   170f6 CODE       _memcpy             
-   17106 CODE       _memset             
-   17116 CODE       _strlen             
-   17126 CODE       ___float32_isinf    
-   17140 CODE       ___float32_isnan    
-   17158 CODE       ___float32_signbit  
-   17168 CODE       ___uint64_to_float32
-   1728c CODE       ___float32_to_int64 
-   1733e CODE       ___float32_add      
-   17430 CODE       ___float32_sub      
-   1743c CODE       ___float32_mul      
-   17514 CODE       ___float32_div      
-   175d2 CODE       ___float32_lt       
-   175ee CODE       ___float32_eq       
-   175fe CODE       _modff              
-   17694 CODE       _floorf             
-   17694 CODE       _floor              
-   17764 CODE       _fmodf              
-   17764 CODE       _fmod               
-   178d6 CODE       _fabsf              
-   178dc CODE       _ldexp              
-   17918 CODE       _frexp              
->>>>>>> f860ec491e5995ef4271f0f06d50ade527128f8b

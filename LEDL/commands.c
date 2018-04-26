@@ -19,16 +19,12 @@ Then function must be added to the "const CMD_SPEC cmd_tbl[]={{"help"," [command
 #include "L3G4200_GYRO.h"
 #include "temp.h"
 
-
 //Declaring globals
   unsigned int port=4;
   unsigned int sda=1;
   unsigned int scl=0;
   unsigned short ret, stat, pwrup; //return status, pwrup variables for sending commands and error checking
-  unsigned char acc[4];
-
-  extern void VCC_ON_OFF(char VCC_NAME, char status);
-
+  signed char acc[4]={0,0,0,0};
 //*********************************************************** passing arguments over the terminal *********************************************
 int example_command(char **argv,unsigned short argc){
   int i,j;
@@ -151,14 +147,14 @@ int SD_read(char **argv,unsigned short argc){
 
         if(i<8){
           printf(ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR "\r\n",
-          buffer[i*28+1],buffer[i*28+2],buffer[i*28+3],buffer[i*28+4],buffer[i*28+5],buffer[i*28+6],buffer[i*28+7],buffer[i*28+8],buffer[i*28+9],buffer[i*28+10],buffer[i*28+11],buffer[i*28+12],buffer[i*28+13],
+          buffer[i*28+3],buffer[i*28+4],buffer[i*28+5],buffer[i*28+6],buffer[i*28+7],buffer[i*28+8],buffer[i*28+9],buffer[i*28+10],buffer[i*28+11],buffer[i*28+12],buffer[i*28+13],
           buffer[i*28+14],buffer[i*28+15],buffer[i*28+16],buffer[i*28+17],buffer[i*28+18],buffer[i*28+19],buffer[i*28+20],buffer[i*28+21],buffer[i*28+22],buffer[i*28+23],
           buffer[i*28+24],buffer[i*28+25],buffer[i*28+26],buffer[i*28+27],buffer[i*28+28],buffer[i*28+29],buffer[i*28+30]);
           }
 
         else{
           printf(ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR ASCIIOUT_STR "\r\n",
-          buffer[i*28+1],buffer[i*28+2],buffer[i*28+3],buffer[i*28+4],buffer[i*28+5],buffer[i*28+6],buffer[i*28+7],buffer[i*28+8],buffer[i*28+9],buffer[i*28+10],buffer[i*28+11],buffer[i*28+12],buffer[i*28+13],
+          buffer[i*28+3],buffer[i*28+4],buffer[i*28+5],buffer[i*28+6],buffer[i*28+7],buffer[i*28+8],buffer[i*28+9],buffer[i*28+10],buffer[i*28+11],buffer[i*28+12],buffer[i*28+13],
           buffer[i*28+14],buffer[i*28+15],buffer[i*28+16],buffer[i*28+17],buffer[i*28+18],buffer[i*28+19],buffer[i*28+20],buffer[i*28+21],buffer[i*28+22],buffer[i*28+23],
           buffer[i*28+24],buffer[i*28+25],buffer[i*28+26],buffer[i*28+27],buffer[i*28+28],buffer[i*28+29],buffer[i*28+30]);
           }
@@ -214,11 +210,11 @@ int getX_Rotation(char **argv,unsigned short argc){
   unsigned char dat[1];
   unsigned short sendSize=1;
   unsigned short receiveSize=1;
-  unsigned char addr[2]={L3G4200_OUT_X_LOW, L3G4200_OUT_X_HIGH};
+  unsigned char addr[2]={L3G4200_OUT_X_LOW, L3G4200_OUT_X_HIGH };
      initI2C(port,sda,scl);
      pwrup=i2c_tx(L3G4200_SAD,pwr,2);
      stat=i2c_tx(L3G4200_SAD,statreg,1); 
-     ret=i2c_rx(L3G4200_SAD,dat,1);
+     i2c_rx(L3G4200_SAD,dat,1);
      ret=i2c_tx(L3G4200_SAD,addr+1,sendSize);
       if(ret>0){//if tx is able to send 1 byte( the address of the slave) 
            ret=i2c_rx(L3G4200_SAD,dat,receiveSize);
@@ -252,7 +248,7 @@ int getY_Rotation(char **argv,unsigned short argc){
     initI2C(port,sda,scl);
     pwrup=i2c_tx(L3G4200_SAD,pwr,2);
     stat=i2c_tx(L3G4200_SAD,statreg,1);
-    ret=i2c_rx(L3G4200_SAD,dat,1);
+    i2c_rx(L3G4200_SAD,dat,1);
     ret=i2c_tx(L3G4200_SAD,addr+1,sendSize);
       if(ret>0){//if tx is able to send 1 byte( the address of the slave) 
            ret=i2c_rx(L3G4200_SAD,dat,receiveSize);
@@ -286,7 +282,7 @@ int getZ_Rotation(char **argv,unsigned short argc){
     initI2C(port,sda,scl);
     pwrup=i2c_tx(LIS3DH_Write_SAD,pwr,2);
     stat=i2c_tx(L3G4200_SAD,statreg,1); 
-    ret=i2c_rx(L3G4200_SAD,dat,1);
+    i2c_rx(L3G4200_SAD,dat,1);
     ret=i2c_tx(L3G4200_SAD,addr+1,sendSize);
       if(ret>0){//if tx is able to send 1 byte( the address of the slave) 
            ret=i2c_rx(L3G4200_SAD,dat,receiveSize);
@@ -309,7 +305,7 @@ int getZ_Rotation(char **argv,unsigned short argc){
     //  printf(" \r\n\t Z axis rotational rate %i deg/sec",zmeas);
 }
 
-int rotationVector(char **argv, unsigned short argc){
+void rotationVector(char **argv, unsigned short argc){
   while(UCA2_CheckKey()==EOF){
       short xValue=getX_Rotation(0,0), yValue=getY_Rotation(0,0), zValue=getZ_Rotation(0,0);
       printf("(%i,%i,%i) %c/sec \r\n\t", xValue,yValue,zValue,248);
@@ -319,7 +315,7 @@ int rotationVector(char **argv, unsigned short argc){
 
 
 int getRotation(char **argv, unsigned short argc){
-  unsigned short busSize=1;
+   unsigned short busSize=1;
   unsigned char dat[1];
   unsigned char addr[1]= {L3G4200_WHO_AM_I };
   initI2C( port,sda,scl); 
@@ -327,7 +323,8 @@ int getRotation(char **argv, unsigned short argc){
     printf("tx return %i \r\n\t",ret);
     printf("dat stored %s \r\n\t",*dat);
   ret=i2c_rx(0x69,dat,1);
-    printf("rx return %i \r\n\t",ret);
+
+       printf("rx return %i \r\n\t",ret);
     printf("dat stored %xh \r\n\t", dat[0]);
 
   //ret = i2c_txrx(0x69,addr,busSize,dat,busSize);
@@ -356,34 +353,33 @@ int temp(char **argv,unsigned short argc)
 //initalize accelerometer to measure 16 G 
 int initalize_acc(char **argv,unsigned short argc){
 unsigned char  pwr[2]= {LIS3DH_CTRL_REG1,0x9F};         //for sending the command to enable all axes and putting the turning the acc on
-unsigned char  dat[1]={0};         //buffer for data received
+unsigned char  dat[1];         //buffer for data received
 unsigned char  ctrl_reg4[2]={LIS3DH_CTRL_REG4,0x30};////set accelerometer to be 16 G responsive CTRL_REG4 (23h) 
-int pwrup=0; 
+int pwrup; 
   //block data update - continious update (0), BLE data selection (0) LSB at lower address 
  //FS set to 16 G, (11), High resoultion mode disableded (0), self test disabled (00), SPI interface mode (x) write 00110000 0x30 
 unsigned char stataddr[1]= {LIS3DH_STATUS_REG};
-initI2C(port,sda,scl);            //Initalize I2c
-pwrup = i2c_tx(LIS3DH_SAD,pwr,2); //send powerup command to acc
+  initI2C(port,sda,scl);            //Initalize I2c
+ pwrup = i2c_tx(LIS3DH_SAD,pwr,2); //send powerup command to acc
   if(pwrup != 2){
-    //printf("pwrup=%i \r\n",pwrup);
-    printf("Power on failed, pwrup returned:%i \r\n\t",pwrup); //Print debugging statement
+   /// printf("Power on failed, pwrup returned: \r\n\t"); //Print debugging statement
     return 0;
   }
    pwrup = i2c_tx(LIS3DH_SAD,ctrl_reg4,2); //send set up acc command to take 16 G acceleration 
   if(pwrup != 2){
-    printf("Command Ctl register failed, i2c returned: %i \r\n\t",pwrup); //Print debugging statement
+    //printf("Command Ctl register failed, i2c returned: %i \r\n\t",pwrup); //Print debugging statement
     return 0;
     }
   //take status data
   stat=i2c_tx(LIS3DH_SAD,stataddr,1);                  //poll the status register
- ret= i2c_rx(LIS3DH_SAD,dat,1);                //get the stuff from the stat reg
+  i2c_rx(LIS3DH_SAD,dat,1);                //get the stuff from the stat reg
    printf("Status register returned: %i \r\n\t ",dat[0]);
-     return 1;
+return 0;
 }
 
 //take all accelerometer data
 
-int  get_Acceleration(char **argv,unsigned short argc){
+signed char *get_Acceleration(char **argv,unsigned short argc){
 //Declare variables up here so Xworks doesn't complain.
 unsigned short sendSize    =1; //Size of data sent
 unsigned short receiveSize =1; //Size of data received
@@ -392,61 +388,57 @@ unsigned char addr[3]={LIS3DH_OUT_X_H,LIS3DH_OUT_Y_H,LIS3DH_OUT_Z_H}; //addresse
 unsigned char stataddr[1]= {LIS3DH_STATUS_REG};
   //take acceleration data
   stat=i2c_tx(LIS3DH_SAD,stataddr,1);                  //poll the status register
-  ret=i2c_rx(LIS3DH_SAD,acc,1);                //get the stuff from the stat reg
-   //printf("Status register returned: %i \r\n\t ",dat[0]);
+  i2c_rx(LIS3DH_SAD,acc,1);                //get the stuff from the stat reg
+  // printf("Status register returned: %i \r\n\t ",dat[0]);
 
   ret=i2c_tx(LIS3DH_SAD, addr,sendSize); //Poll the register for the X_acc high bits
   if(ret>0){  
       ret=i2c_rx(LIS3DH_SAD,acc+1,receiveSize);
   }else{
-        printf("%i", ret);
-        //printf("ret H on x-axis failed, ret returned: %i \r\n\t ",ret);
+        printf("ret H on x-axis failed, ret returned: %i \r\n\t ",ret);
         return 0;
   }
-  ret=i2c_tx(LIS3DH_SAD, addr+1,sendSize); //Poll the register for the Y_acc high bits
+  ret=i2c_tx(LIS3DH_SAD, addr+1,sendSize); //Poll the register for the X_acc high bits
   if(ret>0){  
       ret=i2c_rx(LIS3DH_SAD,acc+2,receiveSize);
   }else{
-        //printf("ret H on y-axis failed, ret returned: %i \r\n\t ",ret);
+        printf("ret H on y-axis failed, ret returned: %i \r\n\t ",ret);
         return 0;
   }
-  ret=i2c_tx(LIS3DH_SAD, addr+2,sendSize); //Poll the register for the Z_acc high bits
+  ret=i2c_tx(LIS3DH_SAD, addr+2,sendSize); //Poll the register for the X_acc high bits
   if(ret>0){  
       ret=i2c_rx(LIS3DH_SAD,acc+3,receiveSize);
   }else{
-        //printf("ret H on z-axis failed, ret returned: %i \r\n\t ",ret);
+        printf("ret H on z-axis failed, ret returned: %i \r\n\t ",ret);
         return 0;
   }
   //printf("%c %c %c", x_Acc[1], x_Acc[2], x_Acc[3]);
-  return 1;   
+  return acc;   
  }
 
+/*
+void accVector(char **argv, unsigned short argc){
+ signed char accelx[10], accely[10],accelz[10];
+ signed char data[10]; 
+ int samples = 10; 
+ long time[40];
+ int i=0; 
+  for(i=0;i<samples;i++){
+  get_Acceleration(0,0);
+      data[i]=acc[0];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
+      accelx[i]=acc[1];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
+      accely[i]=acc[2];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
+      accelz[i]=acc[3];//, yValue=getY_Rotation(), zValue=getZ_Rotation(); 
+      //ctl_timeout_wait(ctl_get_current_time()+5);
+      time[i]=ctl_get_current_time();
+}
 
-//void accVector(char **argv, unsigned short argc){
-// #define samples 1000
-// signed char accelx[samples], accely[samples],accelz[samples];
-// signed char data[samples]; 
-//  
-// long time[2];
-// int i=0; 
-// int ret; 
-// time[0]=ctl_get_current_time();
-//  for(i=0;i<samples;i++){
-//  ret=get_Acceleration(0,0);
-//      data[i]=acc[0];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
-//      accelx[i]=acc[1];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
-//      accely[i]=acc[2];//, yValue=getY_Rotation(), zValue=getZ_Rotation();
-//      accelz[i]=acc[3];//, yValue=getY_Rotation(), zValue=getZ_Rotation(); 
-//      //ctl_timeout_wait(ctl_get_current_time()+5);
-//      
-//}
-//time[1]=ctl_get_current_time();
-//  for(i=0;i<samples;i++){
-//   printf("(data=%i, x=%i, y=%i, z=%i time= %lu \r\n", data[i],accelx[i],accely[i],accelz[i],time[i]);//
-//   } 
-// printf("Time start %lu, time finish %l2", time[0],time[1]);//
-//}
-
+  for(i=0;i<samples;i++){
+   printf("(data=%i, x=%i, y=%i, z=%i time= %lu \r\n", data[i],accelx[i],accely[i],accelz[i],time[i]);//
+   } 
+ //printf("STUPID TEST");//
+}
+*/
 /*
 void acceleration_Vector(char **argv,unsigned short argc){
  while(UCA2_CheckKey()==EOF){
@@ -458,12 +450,12 @@ void acceleration_Vector(char **argv,unsigned short argc){
 }*/
 //table of commands with help
 const CMD_SPEC cmd_tbl[]={{"help"," [command]",helpCmd},
-                   //{"ex","[arg1] [arg2] ...\r\n\t""Example command to show how arguments are passed",example_command},
-                  // {"timer_IR","[time]...\r\n\tExample command to show how the timer can be used as an interupt",example_timer_IR},
+                   {"ex","[arg1] [arg2] ...\r\n\t""Example command to show how arguments are passed",example_command},
+                   {"timer_IR","[time]...\r\n\tExample command to show how the timer can be used as an interupt",example_timer_IR},
                    {"SD_write","Writes given args to the SD card",SD_write},
                    {"SD_read","",SD_read},
                    {"send_I2C","Sends I2C command to subsystem",send_I2C},
-                   //{"x_acc","display x acceleration",get_Acceleration},
+                   {"x_acc","display x acceleration",get_Acceleration},
                    {"temp","Get Temp data",temp},
                    {"gyro","Get Rotaion data",rotationVector},
                    //{"acc","get timed acceleration data",accVector},
@@ -471,6 +463,4 @@ const CMD_SPEC cmd_tbl[]={{"help"," [command]",helpCmd},
                    ARC_COMMANDS,CTL_COMMANDS,ERROR_COMMANDS,MMC_COMMANDS,
                    //end of list
                    {NULL,NULL,NULL}};
-
-
 

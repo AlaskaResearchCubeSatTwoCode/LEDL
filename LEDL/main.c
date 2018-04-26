@@ -13,22 +13,12 @@ CTL_TASK_t terminal_task,sub_task,sys_task; // name your task (first thing to do
 
 //********************************************* allocate mem for tasks (2)
 //stack for terminal
-unsigned terminal_stack[1500];
+unsigned terminal_stack[2000];
 //stack for subsystem events
 unsigned sys_stack[1000];
 //stack for bus events
 unsigned sub_stack[1000];
 
-
-//specify extern functions 
- extern void ledl_pin_setup(void);
- extern void turn_on_all_sensors(void); //TURN ON ALL SENSORS 
- extern void init_timerA3(void);
- extern void adcsetup(void); 
-
-
-//start timer A in continuous mode
-extern void start_timerA3(void);
 //******************************************** redefine putchar and getchar 
 //make printf and friends use async
 int __putchar(int c){
@@ -66,14 +56,6 @@ void main(void){
 
   //LEDL SENSOR SET UP FOR TESTING 
   turn_on_all_sensors(); //TURN ON ALL SENSORS 
-  
-  //set up adc
-  adcsetup();
-  //test adc funtionality 
-  init_timerA3();
-  
-  //start timer A in continuous mode
-  start_timerA3();
 
   //turn on LED's this will flash the LED's during startup
   P7DIR=0xFF;

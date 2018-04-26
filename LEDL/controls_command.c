@@ -7,11 +7,6 @@
 #include "pins.h"
 
 
-//
-//void ledl_pin_setup(void);
-//void LED_ON_OFF(char LED_NAME, char status);
-//void VCC_ON_OFF(char VCC_NAME, char status);
-//void turn_on_all_sensors(void);
 
 void ledl_pin_setup(void){
 //SET ALL POWER PMOS IN OFF POSITION 
@@ -23,6 +18,7 @@ SENSORS_DS|= 0xFF;//make the sensor drive strength at 3.3 V
 //define LED pins 
 LED_PORT_DIR|=0XFF;
 LED_PORT_DS|=0XFF;
+LED_PORT_OUT&=~0XFF;
 LED_CONTROL_X_DIR|=LED_CONTROL_X;  
 LED_CONTROL_X_OUT&=~LED_CONTROL_X;
 LED_CONTROL_X_DS|=LED_CONTROL_X; 
@@ -73,7 +69,7 @@ void VCC_ON_OFF(char VCC_NAME, char status){
  void turn_on_all_sensors(void){
  P6DIR|=0xFF; 
  P6DS|=0XFF; 
- P6OUT&=0XC5;
+ P6OUT &=0XC5;
  //P6OUT&= 0XDF;
   
  

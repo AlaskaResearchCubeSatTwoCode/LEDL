@@ -23,12 +23,12 @@
       <file file_name="main.c" />
       <file file_name="pins.h" />
       <file file_name="subsystem.h" />
-      <file file_name="commands.c" />
       <file file_name="subsystem.c" />
       <file file_name="controls_command.c" />
       <file file_name="LIS3DH_Accelerometer.h" />
       <file file_name="L3G4200_GYRO.h" />
       <file file_name="temp.h" />
+      <file file_name="commands.c" />
       <file file_name="ADC_setup.c" />
       <file file_name="ADC_setup.h" />
     </folder>
@@ -42,6 +42,7 @@
       Name="Release"
       linker_additional_files="$(ARC_prefix)/lib/BUSlib_Release.hza;$(ARC_prefix)/lib/Error_printg_Release.hza;$(ARC_prefix)/lib/termlib_Release.hza;$(ARC_prefix)/lib/UART_UCA2_Release.hza;$(ARC_prefix)/lib/commandLib_Release.hza;$(ARC_prefix)/lib/SD-lib_err_Release.hza;$(ARC_prefix)/lib/SD-lib_UCA1_Release.hza;$(ARC_prefix)/lib/I2Clib_Release.hza;" />
     <file file_name="control_functions" />
+    <file file_name="ADC" />
   </project>
   <configuration
     Name="MSP430 Debug"
